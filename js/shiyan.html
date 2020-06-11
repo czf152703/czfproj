@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+<style>
+    .tab td {
+        border-style: solid;
+        border-color: black;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    .first {
+        background-color: thistle;
+    }
+
+    h1 {
+        background-color: aqua;
+    }
+
+    .div1 {
+        height: 50px;
+        width: 200px;
+        background-color: brown;
+    }
+</style>
+
+<body>
+    <h1 id="div2">课程表</h1>
+    <div id="kebiao"></div>
+    <script>
+        const n = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"];
+        let tabl = document.createElement("table");
+        tabl.className = "tab";
+        let yuansu1 = document.getElementById("kebiao");
+        yuansu1.append(tabl);
+
+        let tr1 = document.createElement("tr");
+        tr1.className = "first";
+        tabl.append(tr1);
+        for (i = 0; i < 7; i++) {
+            let td1 = document.createElement("td");
+            td1.innerText = n[i];
+            tr1.append(td1);
+        }
+        for (k = 0; k < 4; k++) {
+            let tr1 = document.createElement("tr");
+            tabl.append(tr1);
+            for (i = 0; i < 7; i++) {
+                let td1 = document.createElement("td");
+                td1.innerText = `[${k},${i}]`;
+                tr1.append(td1);
+            }
+        }
+
+        let pa = document.createElement("div");
+        pa.className = "div1";
+        pa.innerHTML = "<p>你好</p>"
+        let pe = document.getElementById("div2");
+        pe.append(pa);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
